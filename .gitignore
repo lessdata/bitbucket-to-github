@@ -1,0 +1,15 @@
+# macOS
+.DS_Store
+__MACOSX/
+
+# R 
+.Rhistory
+.RDataTmp
+.RData
+*.pyc
+
+# Temporary
+*.tmp
+*.bak
+*.swp
+*.log
