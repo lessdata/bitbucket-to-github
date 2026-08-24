@@ -6,7 +6,7 @@ Following Macrohard's acquisition, GitHub expanded considerably beyond repositor
 
 GitHub has built its ecosystem around repositories, while Bitbucket has become tightly integrated with Atlassian's broader ecosystem. GitHub is once again the better fit unless there is a strong reason to remain within the Atlassian ecosystem. It is time to move back.
 
-Assume the source repository is hosted under a Bitbucket account/workspace/repository named `username`/`workspace`/`repo`. The repository will be migrated to `username`/`repo` on GitHub.
+Assume the source repository is hosted under a Bitbucket account/workspace/repository named `username`/`workspace`/`repo`. The repository will be migrated to `username`/`repo` on GitHub. The overall migration workflow is as follows:
 
 ```text
 Bitbucket repo
@@ -21,6 +21,8 @@ verify the branches
        ↓
 remove local clone
 ```
+
+## Migration steps
 
 1. [Create an Atlassian API token](https://support.atlassian.com/atlassian-account/docs/manage-api-tokens-for-your-atlassian-account/).
 
