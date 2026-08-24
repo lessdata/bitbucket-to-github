@@ -6,11 +6,25 @@ Following Macrohard's acquisition, GitHub expanded considerably beyond repositor
 
 GitHub has built its ecosystem around repositories, while Bitbucket has become tightly integrated with Atlassian's broader ecosystem. GitHub is once again the better fit unless there is a strong reason to remain within the Atlassian ecosystem. It is time to move back.
 
-Assume the repository is hosted under a Bitbucket account/workspace/repository named `username`/`workspace`/`repo`. The repository will be migrated to `username`/`repo` on GitHub.
+Assume the source repository is hosted under a Bitbucket account/workspace/repository named `username`/`workspace`/`repo`. The repository will be migrated to `username`/`repo` on GitHub.
+
+```text
+Bitbucket repo
+       ↓
+local bare clone
+       ↓
+empty GitHub repo
+       ↓
+git push --mirror
+       ↓
+verify the branches
+       ↓
+remove local clone
+```
 
 1. [Create an Atlassian API token](https://support.atlassian.com/atlassian-account/docs/manage-api-tokens-for-your-atlassian-account/).
 
-2. Make a fresh bare clone of the Bitbucket repository in a local directory. The Bitbucket (Atlassian) API token will be needed when prompted for the credentials.
+2. Make a fresh bare clone of the source Bitbucket repository in a local directory. The Bitbucket (Atlassian) API token will be needed when prompted for credentials.
 
     ```bash
     git clone --bare https://username@bitbucket.org/workspace/repo.git
@@ -28,24 +42,22 @@ Assume the repository is hosted under a Bitbucket account/workspace/repository n
 
 4. Authenticate GitHub CLI `gh auth login` or [create a GitHub personal access token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens).
 
-5. Create a new repository on GitHub.
+5. Create a new destination repository on GitHub.
 
     ```bash
     cd ..
-    # Import to a new private repository on GitHub
+    # Create a private repository (use --public instead for a public repository)
     gh repo create username/repo --private
-    # Or, import to a new public repository on GitHub
-    gh repo create username/repo --public
     ```
 
-6. Push the locally cloned repository to GitHub. Either the authenticated gh or the GitHub personal access token will be needed.
+6. Push the locally cloned repository to GitHub. Authenticate using either the authenticated gh or the GitHub personal access token when prompted for credentials.
 
     ```bash
     $ cd repo.git
     $ git push --force --mirror https://github.com/username/repo.git
     ```
 
-7. Verify the migration and clean up.
+7. Verify the migration and clean up the local clone.
 
     ```bash
     cd ..
