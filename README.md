@@ -4,7 +4,9 @@ Before GitHub was acquired by Microsoft, Bitbucket was a great alternative for f
 
 Following Macrohard's acquisition, GitHub expanded considerably beyond repository hosting, adding capabilities such as GitHub Actions, cloud development, and security tools. Later, GitHub Copilot helped kick off the explosion of generative AI coding with seamless integration directly into developers' IDE workflows. 
 
-GitHub has built its ecosystem around repositories, while Bitbucket has become tightly integrated with Atlassian's broader ecosystem. GitHub is once again the better fit unless there is a strong reason to remain within the Atlassian ecosystem. It is time to move back.
+GitHub has built its ecosystem around repositories, while Bitbucket has become tightly integrated with Atlassian's broader ecosystem. GitHub is once again the better fit unless there is a strong reason to remain within the Atlassian ecosystem. It is time to move back. I will still miss [Sourcetree](https://www.sourcetreeapp.com). 
+
+<!-- Looking forward, new alternatives may also be worth exploring, particularly platforms such as Cursor Origin that are being designed around AI agents. -->
 
 Assume the source repository is hosted under a Bitbucket account/workspace/repository named `username`/`workspace`/`repo`. The repository will be migrated to `username`/`repo` on GitHub. The overall migration workflow is as follows:
 
