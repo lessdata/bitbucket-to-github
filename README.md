@@ -4,9 +4,7 @@ Before GitHub was acquired by Microsoft, Bitbucket was a great alternative for f
 
 Following Macrohard's acquisition, GitHub expanded considerably beyond repository hosting, adding capabilities such as GitHub Actions, cloud development, and security tools. Later, GitHub Copilot helped kick off the explosion of generative AI coding with seamless integration directly into developers' IDE workflows. 
 
-GitHub has built its ecosystem around repositories, while Bitbucket has become tightly integrated with Atlassian's broader ecosystem. GitHub is once again the better fit unless there is a strong reason to remain within the Atlassian ecosystem. It is time to move back. I may still miss [Sourcetree](https://www.sourcetreeapp.com). 
-
-<!-- Looking forward, new alternatives may also be worth exploring, particularly platforms such as [Cursor Origin](https://cursor.com/origin) that are being designed around AI agents. -->
+GitHub has built its ecosystem around repositories, while Bitbucket has become tightly integrated with Atlassian's broader ecosystem. GitHub is once again the better fit unless there is a strong reason to remain within the Atlassian ecosystem. It is time to move back. I may still miss [Sourcetree](https://www.sourcetreeapp.com). Looking forward, new alternatives may also be worth exploring, particularly platforms such as [Cursor Origin](https://cursor.com/origin) that are designed around AI agents. They need to demonstrate that they can handle data and operations at GitHub scale.
 
 Assume the source repository is hosted under a Bitbucket account/workspace/repository named `username`/`workspace`/`repo`. The repository will be migrated to `username`/`repo` on GitHub. The overall migration workflow is as follows:
 
@@ -61,13 +59,15 @@ remove local clone
     $ git push --force --mirror https://github.com/username/repo.git
     ```
 
-7. Verify the migration.
+7. Migrate Bitbucket Pipelines to GitHub Actions using [GitHub Actions Importer](https://docs.github.com/en/actions/tutorials/migrate-to-github-actions/automated-migrations/bitbucket-pipelines-migration), if needed.
+
+8. Verify the migration.
 
     ```bash
     git ls-remote https://github.com/username/repo.git
     ```
 
-8. Clean up the local clone.
+9. Clean up the local clone.
 
     ```bash
     cd ..
