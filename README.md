@@ -4,7 +4,13 @@ Before GitHub was acquired by Microsoft, Bitbucket was a great alternative for f
 
 Following Macrohard's acquisition, GitHub expanded considerably beyond repository hosting, adding capabilities such as GitHub Actions, cloud development, and security tools. Later, GitHub Copilot helped kick off the explosion of generative AI coding with seamless integration directly into developers' IDE workflows. 
 
-GitHub has built its ecosystem around repositories, while Bitbucket has become tightly integrated with Atlassian's broader ecosystem. GitHub is once again the better fit unless there is a strong reason to remain within the Atlassian ecosystem. It is time to move back. I may still miss [Sourcetree](https://www.sourcetreeapp.com). Looking forward, new alternatives may also be worth exploring, particularly platforms such as [Cursor Origin](https://cursor.com/origin) that are designed around AI agents. They need to demonstrate that they can handle data and operations at GitHub scale.
+[GitHub](https://github.com) has built its ecosystem around repositories, while [Bitbucket](https://bitbucket.org) has become tightly integrated with Atlassian's broader ecosystem. For many development workflows, [GitHub](https://github.com) + [Linear](https://linear.app) provides a compelling alternative to the Atlassian stack. GitHub is once again the better fit unless there is a strong reason to remain within the [Atlassian ecosystem](https://www.atlassian.com). It is time to move back. I may still miss [Sourcetree](https://www.sourcetreeapp.com), which does not have first-class GitHub integration but works well with GitHub repositories. 
+
+Looking forward, new alternatives may also be worth exploring, particularly platforms such as [Cursor Origin](https://cursor.com/origin) that are designed around AI agents. However, they still need to demonstrate that they can reliably handle data and operations at GitHub [scale](https://cursor.com/blog/git-at-any-scale).
+
+
+
+## Migration steps
 
 Assume the source repository is hosted under a Bitbucket account/workspace/repository named `username`/`workspace`/`repo`. The repository will be migrated to `username`/`repo` on GitHub. The overall migration workflow is as follows:
 
@@ -21,8 +27,6 @@ verify the branches
        ↓
 remove local clone
 ```
-
-## Migration steps
 
 1. [Create an Atlassian API token](https://support.atlassian.com/atlassian-account/docs/manage-api-tokens-for-your-atlassian-account/).
 
