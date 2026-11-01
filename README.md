@@ -9,6 +9,7 @@ Following Macrohard's acquisition, GitHub expanded considerably beyond repositor
 Looking forward, new alternatives may also be worth exploring, particularly platforms such as [Cursor Origin](https://cursor.com/origin) that are designed around AI agents. However, they still need to demonstrate that they can reliably handle data and operations at GitHub [scale](https://cursor.com/blog/git-at-any-scale). Much respect for the [engineering](https://github.blog/engineering/the-technology-behind-githubs-new-code-search/) behind [GitHub's](https://github.blog/engineering/a-brief-history-of-code-search-at-github/) remarkable [scale](https://github.blog/open-source/scaling-monorepo-maintenance/).
 
 <!-- [Anthropic Scion](https://www.anthropic.com/research/redesigning-source-control) -->
+<!-- [Entire](https://entire.com/blog/the-git-forge-for-agent-human-collaboration) -->
 
 
 
