@@ -11,6 +11,8 @@ Looking forward, new alternatives may also be worth exploring, particularly plat
 <!-- [Anthropic Scion](https://www.anthropic.com/research/redesigning-source-control) -->
 <!-- [Entire](https://entire.com/blog/the-git-forge-for-agent-human-collaboration) -->
 <!-- [OpenAI Pando](https://openai.com/index/scaling-git-at-openai) -->
+<!-- [Pierre](https://openai.com/index/openai-to-acquire-pierre) -->
+
 
 
 ## Migration steps
